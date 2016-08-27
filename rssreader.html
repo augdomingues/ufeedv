@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8">
+<head>
+    <title>UFeedV</title>
+</head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="w3.css">
+<script src="rssfeed.js">
+</script>
+<body onload="checaFeedsCadastrados();">
+    <img align="right"src="capybara.png"><br>
+    <center>
+    <h1 style="font-size: 60px;">&nbsp;&nbsp;UF<i class="w3-animate-left" style="color: red;">eed</i>V</h1>
+    <b class="w3-animate-right">&nbsp;&nbsp;Leitor</b><b class="w3-animate-left"> rápido de RSS</b>
+        <br>
+        <br>
+    <input class="w3-input w3-border w3-light-grey" id="feed" type="text" placeholder="Entre com o Feed" required>
+    <!-- <input class="w3-btn-block" id="getfeed" type="submit" onclick="getRSS()" value="Buscar!"> -->
+        <button id="getfeed" onclick="getRSS()" class="w3-btn-block" >Buscar!</button>
+
+    <div class="w3-progress-container">
+        <div id="myBar" class="w3-progressbar w3-red" style="width:0%;"></div>
+    </div>
+
+
+
+</center>
+<div class="w3-row">
+    <div class="w3-col s9">
+        <h3 id="quantidade"></h3>
+        <ul class="w3-ul w3-hoverable w3-card-4" id="demo"></ul>
+    </div>
+    <div class="w3-col s3">
+        <h3>Seus feeds</h3>
+        <ul class="w3-ul" id="seusFeeds"></ul>
+    </div>
+</div>
+
+
+</body>
+</html>

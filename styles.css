@@ -1,0 +1,18 @@
+.borda {
+    border: 1px solid black;
+    padding: 15px;
+    margin: 0px;
+}
+
+
+.header {
+    background-color: green;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #AAAAAA;
+}
