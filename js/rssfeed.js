@@ -49,6 +49,11 @@ function getStorageRSS(storageURL){
 function myFunction(xml) {
     var xmlDoc = xml.responseXML;
     var nomeFeed = xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+    var isAtom = xmlDoc.getElementsByTagName("feed").length;
+    if(isAtom > 0){
+        alert("Feeds em atom não são suportados ainda!");
+        return;
+    }
     console.log("Novo: " + nomeFeed);
     if(novoFeed(nomeFeed))
     {
@@ -97,7 +102,7 @@ function addListaNomesFeed(nomeFeed)
 {
     var seusFeeds = document.getElementById("seusFeeds").innerHTML;
     var spanClass = "<span id=\'" + nomeFeed + '\' onclick="removeFeed(\'' + nomeFeed + '\')\"' + " class=\"w3-closebtn w3-margin-right w3-medium\">x</span>";
-    seusFeeds+= "<li>" + nomeFeed + spanClass + "</li>";
+    seusFeeds+= "<li style='font-size:12px;'>" + nomeFeed + spanClass + "</li>";
     document.getElementById("seusFeeds").innerHTML = seusFeeds;
 }
 //\"this.parentElement.style.display='none'\"
